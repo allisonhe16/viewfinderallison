@@ -49,7 +49,7 @@
         <!--Add New Photo-->
         <scene sceneID="aax-Ui-Tif">
             <objects>
-                <viewController id="wEK-DF-zjW" sceneMemberID="viewController">
+                <viewController id="wEK-DF-zjW" customClass="AddPhotoViewController" customModule="viewfinderallison" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1x8-B5-Nac">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,11 +58,17 @@
                                 <rect key="frame" x="68" y="486" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButton:" destination="wEK-DF-zjW" eventType="touchUpInside" id="bCj-TC-f8F"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvL-F7-U87">
                                 <rect key="frame" x="252" y="486" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Photo Library"/>
+                                <connections>
+                                    <action selector="photoLibrary:" destination="wEK-DF-zjW" eventType="touchUpInside" id="ul0-LZ-bQV"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Yellow-Octopus-Smoko-Inc-Dumpling-Light-2_1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="cgi-vz-2mN">
                                 <rect key="frame" x="87" y="179" width="240" height="244"/>
@@ -85,6 +91,9 @@
                         <viewLayoutGuide key="safeArea" id="QFS-y2-iIv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Photo" id="Y7s-6n-x3s"/>
+                    <connections>
+                        <outlet property="imageView" destination="cgi-vz-2mN" id="lFa-wU-kab"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="phe-kw-sou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
